@@ -1,0 +1,188 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Lucas Lamboley} \\ \vspace{1pt}
+    \small +336667569982 $|$ \href{mailto:lucas.lamboley@outook.com}{\underline{lucas.lamboley@outook.com}} $|$ 
+    \href{https://gingerengineer.dev}{\underline{gingerengineer.dev}} $|$
+    \href{https://github.com/lamboley}{\underline{github.com/lamboley}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {IUT Béziers}{Béziers, France}
+      {Licence Professionnelle, Spécialité Administration et Sécurité des Réseaux}{Août. 2015 -- Mai 2016}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Expériences}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Administrateur Système Reseau DevOps}{Octobre 2025 -- Présent}
+      {ViaEvista}{Nancy, France}
+      \resumeItemListStart
+        \resumeItem{Développement de rôle réutilisable pour minimiser la duplication de code}
+        \resumeItem{Accompagnement des devs pour le déploiement}
+        \resumeItem{Réalisation de documentation sur l'utilisation des playbooks}
+        \resumeItem{Gestion d’incident via un système de tickets}
+        \resumeItem{Conception de Gitlab CI pour automatiser l’exécution des playbooks}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Ingénieur Integration}{Août 2021 -- Septembre 2025}
+      {Crédit Agricole}{Nancy, France}
+      \resumeItemListStart
+        \resumeItem{Administration d'une infrastructure Cloud AWS et Scaleway}
+        \resumeItem{IaC avec Terraform}
+        \resumeItem{Déploiement continu avec Gitlab CI/CD et Ansible}
+        \resumeItem{Mise en place de l'observabilité}
+        \resumeItem{Respect des pratiques ITIL}
+    \resumeItemListEnd
+    
+    \resumeSubheading
+      {Ingénieur Production}{Février 2017 -- Juillet 2020}
+      {Crédit Agricole}{Lille, France}
+      \resumeItemListStart
+        \resumeItem{Administration d'une infrastructure comprenant plus de 100 API REST/SOAP réparties sur plus de 2500 machines Docker}
+        \resumeItem{Déploiement d'API via Ansible}
+        \resumeItem{Gestion d'incident via un système de tickets, gestion efficace de cellules de crise, et gestion de l'exploitation des machines (documentation, supervision, ...)}
+        \resumeItem{Développement Bash, Perl et Python}
+        \resumeItem{Opérations de purge de fichiers, mise en place d'un téléchargement simultané de logs, développement d'un client SFTP avancé pour des transferts plus rapide}
+        \resumeItem{Collecte de données statistiques provenant de routeurs HAProxy en vue de leur intégration dans Graphana}
+        \resumeItem{Extraction de données à partir de fichiers XML afin de les injecter dans une base de données Sqlite et Redis}
+    \resumeItemListEnd
+    
+    \resumeSubheading
+      {Apprenti Ingénieur en Informatique}{Octobre 2015 -- Octobre 2016}
+      {Vétoquinol}{Lure, France}
+      \resumeItemListStart
+        \resumeItem{Conception d'une plate-forme de virtualisation innovante, reposant sur OpenStack et Ceph, tout en mettant en œuvre une solution de répartition de charge hautement performante}
+        \resumeItem{Utilisation d'Ansible pour permettre un déploiement automatisé de la plate-forme}
+    \resumeItemListEnd
+    
+\resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Compétences Informatique}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{OS}{: Redhat, Debian} \\
+     \textbf{Cloud}{: AWS, Scaleway} \\
+     \textbf{Development}{: Perl, Python, Lua, Shell, Go} \\
+     \textbf{Infrastructure}{: Docker/Docker Swarm, Ansible, Gitlab CI, Jenkins, Nexus} \\
+     \textbf{Observability}{: Grafana, Alloy, Loki, Prometheus, Alert Manager, Netdata, Zabbix} \\
+     \textbf{Middleware}{: Apache/Nginx, Tomcat, HAProxy, JBoss, MySQL} \\
+     \textbf{Database}{: MySQL} \\
+     \textbf{Anglais}{: Lu, écrit, parlé}
+    }}
+ \end{itemize}
+ 
+%-----------PROGRAMMING SKILLS-----------
+\section{Centres d'intérêt}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Home Lab}{: Raspberry Pi 5, Raspberry Pi 0 2W} \\
+     \textbf{Développement}{: Développement d'addons World of Warcraft, de package Atom et de module Perl}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
