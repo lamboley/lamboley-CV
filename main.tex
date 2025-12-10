@@ -13,8 +13,9 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
-%----------FONT OPTIONS----------
-% sans-serif
+%-------------------------
+% Font: sans-serif
+
 % \usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
 % \usepackage[sfdefault]{noto-sans}
@@ -25,12 +26,11 @@
 % \usepackage{charter}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -43,16 +43,15 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
+
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
@@ -91,11 +90,10 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Content
 
 \begin{document}
 
-%----------HEADING----------
 \begin{center}
     \textbf{\Huge \scshape Lucas Lamboley} \\ \vspace{1pt}
     \small +336667569982 $|$ \href{mailto:lucas.lamboley@outook.com}{\underline{lucas.lamboley@outook.com}} $|$ 
@@ -103,38 +101,36 @@
     \href{https://github.com/lamboley}{\underline{github.com/lamboley}}
 \end{center}
 
-%-----------EDUCATION-----------
-\section{Education}
+\section{Éducation}
   \resumeSubHeadingListStart
     \resumeSubheading
       {IUT Béziers}{Béziers, France}
       {Licence Professionnelle, Spécialité Administration et Sécurité des Réseaux}{Août. 2015 -- Mai 2016}
   \resumeSubHeadingListEnd
 
-%-----------EXPERIENCE-----------
 \section{Expériences}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Administrateur Système Reseau DevOps}{Octobre 2025 -- Présent}
+      {Administrateur Système Réseau DevOps}{Octobre 2025 -- Présent}
       {ViaEvista}{Nancy, France}
       \resumeItemListStart
-        \resumeItem{Développement de rôle réutilisable pour minimiser la duplication de code}
-        \resumeItem{Accompagnement des devs pour le déploiement}
-        \resumeItem{Réalisation de documentation sur l'utilisation des playbooks}
-        \resumeItem{Gestion d’incident via un système de tickets}
-        \resumeItem{Conception de Gitlab CI pour automatiser l’exécution des playbooks}
+        \resumeItem{Administration d'une infrastructure Cloud AWS et Scaleway}
+        \resumeItem{Infrastructure as Code avec Terraform}
+        \resumeItem{Déploiement continu avec Gitlab CI/CD et Ansible}
+        \resumeItem{Mise en place de l'observabilité (Grafana, Alert Manager, Prometheus, Loki, Alloy}
+        \resumeItem{Respect des pratiques ITIL}
       \resumeItemListEnd
 
     \resumeSubheading
       {Ingénieur Integration}{Août 2021 -- Septembre 2025}
       {Crédit Agricole}{Nancy, France}
       \resumeItemListStart
-        \resumeItem{Administration d'une infrastructure Cloud AWS et Scaleway}
-        \resumeItem{IaC avec Terraform}
-        \resumeItem{Déploiement continu avec Gitlab CI/CD et Ansible}
-        \resumeItem{Mise en place de l'observabilité}
-        \resumeItem{Respect des pratiques ITIL}
+        \resumeItem{Développement de rôle réutilisable pour minimiser la duplication de code}
+        \resumeItem{Accompagnement des devs pour le déploiement}
+        \resumeItem{Réalisation de documentation sur l'utilisation des playbooks}
+        \resumeItem{Gestion d’incident via un système de tickets}
+        \resumeItem{Conception de Gitlab CI pour automatiser l’exécution des playbooks}
     \resumeItemListEnd
     
     \resumeSubheading
@@ -160,22 +156,21 @@
     
 \resumeSubHeadingListEnd
 
-%-----------PROGRAMMING SKILLS-----------
 \section{Compétences Informatique}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{OS}{: Redhat, Debian} \\
-     \textbf{Cloud}{: AWS, Scaleway} \\
-     \textbf{Development}{: Perl, Python, Lua, Shell, Go} \\
+     \textbf{Cloud}{: AWS, Scaleway, Terraform} \\
+     \textbf{CI/CD}{: GitlabCI} \\
+     \textbf{Development}{: Perl, Python, Shell, Go} \\
      \textbf{Infrastructure}{: Docker/Docker Swarm, Ansible, Gitlab CI, Jenkins, Nexus} \\
      \textbf{Observability}{: Grafana, Alloy, Loki, Prometheus, Alert Manager, Netdata, Zabbix} \\
-     \textbf{Middleware}{: Apache/Nginx, Tomcat, HAProxy, JBoss, MySQL} \\
-     \textbf{Database}{: MySQL} \\
+     \textbf{Middleware}{: Apache/Nginx, Tomcat, HAProxy, JBoss} \\
+     \textbf{Database}{: MySQL, PostgreSQL} \\
      \textbf{Anglais}{: Lu, écrit, parlé}
     }}
  \end{itemize}
  
-%-----------PROGRAMMING SKILLS-----------
 \section{Centres d'intérêt}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
@@ -184,5 +179,4 @@
     }}
  \end{itemize}
 
-%-------------------------------------------
 \end{document}
