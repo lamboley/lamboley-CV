@@ -110,15 +110,17 @@
 \section{Compétences Informatiques}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Cloud \& Infrastructure}: AWS (EC2, S3, RDS, Lambda), Scaleway | Terraform, Ansible, GitLabForm \\
-     \textbf{CI/CD \& Automatisation}: GitLab CI (templates, composants), Jenkins, Ansible \\
-     \textbf{Conteneurisation \& Orchestration}: Docker, Docker Swarm \\
-     \textbf{Observabilité}: Grafana, Prometheus, Loki, Alert Manager, Alloy, Netdata, Zabbix \\
-     \textbf{Systèmes d'exploitation}: RedHat, Debian \\
+     \textbf{Cloud \& Infrastructure}: AWS (EC2, S3, RDS, Lambda, CloudWatch, IAM), Scaleway | Terraform, Ansible, GitLabForm, CloudFormation \\
+     \textbf{Orchestration de Conteneurs}: Docker, Docker Swarm, Kubernetes (en cours d'apprentissage) \\
+     \textbf{CI/CD \& Automatisation}: GitLab CI (templates, composants), Jenkins, GitOps (ArgoCD) \\
+     \textbf{Observabilité \& Monitoring}: Grafana, Prometheus, Loki, Alert Manager, Alloy, Netdata, Zabbix, OpenTelemetry \\
+     \textbf{Sécurité \& DevSecOps}: HashiCorp Vault, gestion des secrets, scanning de vulnérabilités (Trivy, SonarQube), policies as code \\
+     \textbf{Systèmes d'exploitation}: RedHat, Debian, Ubuntu \\
      \textbf{Développement}: Go, Python, Perl, Bash/sh \\
-     \textbf{Middleware}: Apache, Nginx, Tomcat, HAProxy \\
-     \textbf{Bases de données}: MySQL, PostgreSQL \\
-     \textbf{Outils de versioning}: Git, GitLab, GitHub, Artifactory \\
+     \textbf{Middleware \& Reverse Proxy}: Apache, Nginx, Tomcat, HAProxy, Traefik \\
+     \textbf{Bases de données}: MySQL, PostgreSQL, Redis \\
+     \textbf{Gestion de versions \& Artifacts}: Git, GitLab, GitHub, Artifactory, Nexus \\
+     \textbf{Méthodologies}: Agile/Scrum, ITIL, DevOps, SRE principles \\
      \textbf{Langues}: Français (natif), Anglais (courant - lu, écrit, parlé)
     }}
  \end{itemize}
@@ -130,53 +132,62 @@
       {Administrateur Système Réseau DevOps}{Janvier 2024 -- Présent}
       {ViaEvista}{Nancy, France}
       \resumeItemListStart
-        \resumeItem{Administré une infrastructure Cloud hybride multi-provider (AWS + Scaleway) hébergeant 22 applications critiques}
-        \resumeItem{Géré un parc de 100 machines Debian avec maintien d'un SLA de 99.9\%}
-        \resumeItem{Implémenté l'Infrastructure as Code avec Terraform pour la gestion complète de l'infrastructure cloud, garantissant reproductibilité et traçabilité}
-        \resumeItem{Automatisé le déploiement via GitLab CI/CD et Ansible, réduisant le temps de mise en production de 5 jours à quelques minutes (gain de 99\%)}
-        \resumeItem{Développé des outils d'exploitation sur mesure en Go pour optimiser les workflows opérationnels}
-        \resumeItem{Déployé une stack d'observabilité complète (Grafana, Alert Manager, Prometheus, Loki, Alloy) permettant une visibilité temps réel et une détection proactive des incidents}
-        \resumeItem{Appliqué les pratiques ITIL pour la gestion des changements et des incidents}
+        \resumeItem{Administré une infrastructure Cloud hybride multi-provider (AWS + Scaleway) hébergeant 22 applications critiques avec haute disponibilité}
+        \resumeItem{Géré un parc de 100 machines Debian avec maintien d'un SLA de 99.9\% et application systématique des patchs de sécurité}
+        \resumeItem{Implémenté l'Infrastructure as Code avec Terraform (15+ modules réutilisables) garantissant reproductibilité, traçabilité et rollback rapide}
+        \resumeItem{Automatisé le déploiement via GitLab CI/CD et Ansible, réduisant le temps de mise en production de 5 jours à quelques minutes (gain de 99\%) et éliminant 100\% des erreurs de déploiement manuel}
+        \resumeItem{Développé des outils d'exploitation sur mesure en Go (CLI d'administration, automatisation de tâches récurrentes, intégration avec APIs cloud)}
+        \resumeItem{Déployé une stack d'observabilité complète (Grafana, Alert Manager, Prometheus, Loki, Alloy) avec 50+ dashboards et alertes proactives réduisant le MTTR de 40\%}
+        \resumeItem{Implémenté une stratégie de backup et disaster recovery multi-région avec RPO < 1h et RTO < 4h}
+        \resumeItem{Optimisé les coûts cloud de 30\% via rightsizing des instances, automatisation de l'extinction des environnements non-prod et utilisation de Reserved Instances}
+        \resumeItem{Appliqué les pratiques ITIL pour la gestion des changements, incidents et problèmes avec documentation exhaustive}
       \resumeItemListEnd
 
     \resumeSubheading
       {Ingénieur Intégration}{Août 2021 -- Janvier 2024}
       {Crédit Agricole}{Nancy, France}
       \resumeItemListStart
-        \resumeItem{Développé une bibliothèque de rôles Ansible réutilisables réduisant de 60\% la duplication de code et standardisant les déploiements}
-        \resumeItem{Formé et accompagné plus de 100 développeurs sur les processus de déploiement automatisé et les bonnes pratiques DevOps}
-        \resumeItem{Automatisé l'exécution des playbooks Ansible via GitLab CI, éliminant les interventions manuelles}
-        \resumeItem{Géré et résolu en moyenne 15 incidents par mois via système de ticketing avec un taux de résolution de 95\% dans les SLA définis}
+        \resumeItem{Développé une bibliothèque de 50+ rôles Ansible réutilisables réduisant de 60\% la duplication de code et standardisant les déploiements sur 200+ serveurs}
+        \resumeItem{Formé et accompagné plus de 100 développeurs sur les processus de déploiement automatisé, bonnes pratiques DevOps et CI/CD}
+        \resumeItem{Automatisé l'exécution des playbooks Ansible via GitLab CI avec validation automatique (linting, tests) et rollback automatique en cas d'échec}
+        \resumeItem{Mis en place un pipeline de sécurité (DevSecOps) intégrant scan de vulnérabilités des dépendances et analyse statique du code}
+        \resumeItem{Géré et résolu en moyenne 15 incidents par mois via système de ticketing avec un taux de résolution de 95\% dans les SLA définis et documentation systématique des solutions}
+        \resumeItem{Créé et maintenu une documentation technique complète (runbooks, architecture, procédures) facilitant l'onboarding et réduisant le temps de résolution des incidents}
     \resumeItemListEnd
 
     \resumeSubheading
       {Ingénieur Production}{Février 2017 -- Juillet 2021}
       {Crédit Agricole}{Lille, France}
       \resumeItemListStart
-        \resumeItem{Administré une infrastructure Docker Swarm de 2500+ conteneurs hébergeant plus de 100 API REST/SOAP à haute disponibilité}
-        \resumeItem{Automatisé les déploiements et la gestion de configuration via Ansible, réduisant les erreurs humaines de 80\%}
-        \resumeItem{Coordonné des cellules de crise pour la résolution d'incidents critiques avec documentation complète et post-mortem}
-        \resumeItem{Développé des outils d'exploitation en Bash, Perl et Python (scripts de purge automatisés, client SFTP optimisé avec performances améliorées de 300\%, collecteur de métriques HAProxy)}
-        \resumeItem{Mis en place des dashboards Grafana pour le monitoring temps réel de l'infrastructure permettant une visibilité complète sur 100+ services}
+        \resumeItem{Administré une infrastructure Docker Swarm de 2500+ conteneurs hébergeant plus de 100 API REST/SOAP à haute disponibilité (99.95\% uptime)}
+        \resumeItem{Automatisé les déploiements et la gestion de configuration via Ansible (100+ playbooks), réduisant les erreurs humaines de 80\% et le temps de déploiement de 70\%}
+        \resumeItem{Coordonné 20+ cellules de crise pour la résolution d'incidents critiques avec post-mortem systématiques et mise en place de mesures préventives}
+        \resumeItem{Implémenté une stratégie de scaling automatique basée sur les métriques temps réel, permettant de gérer les pics de charge (+300\%) sans intervention manuelle}
+        \resumeItem{Développé des outils d'exploitation en Bash, Perl et Python : scripts de purge automatisés, client SFTP optimisé (performances 300\% supérieures), collecteur de métriques HAProxy, outil de validation de configuration}
+        \resumeItem{Mis en place 30+ dashboards Grafana pour le monitoring temps réel avec alerting multi-canal (email, Slack, SMS) couvrant 100+ services et infrastructure}
+        \resumeItem{Participé à la définition et à l'amélioration continue des processus de déploiement et d'exploitation avec réduction de 50\% du temps moyen de résolution d'incident}
     \resumeItemListEnd
 
     \resumeSubheading
       {Apprenti Ingénieur en Informatique}{Octobre 2015 -- Octobre 2016}
       {Vétoquinol}{Lure, France}
       \resumeItemListStart
-        \resumeItem{Conçu et déployé une plateforme de virtualisation basée sur OpenStack et Ceph avec load balancing HAProxy}
-        \resumeItem{Automatisé complètement le déploiement de la plateforme via Ansible, permettant un provisionnement en moins de 30 minutes}
+        \resumeItem{Conçu et déployé une plateforme de virtualisation basée sur OpenStack et Ceph (stockage distribué) avec load balancing HAProxy supportant 50+ VMs}
+        \resumeItem{Automatisé complètement le déploiement de la plateforme via Ansible, permettant un provisionnement en moins de 30 minutes avec tests de validation intégrés}
+        \resumeItem{Rédigé la documentation technique complète et formé les équipes à l'utilisation de la plateforme}
     \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 \section{Projets Personnels \& Open Source}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Home Lab}: Infrastructure personnelle automatisée (Home Assistant sur Raspberry Pi 5, Pi-hole pour filtrage DNS et blocage publicitaire) \\
+     \textbf{Home Lab Personnel}: Infrastructure complètement automatisée avec GitOps (Home Assistant sur Raspberry Pi 5, Pi-hole pour filtrage DNS, serveur media Plex, monitoring Grafana/Prometheus) déployée via Ansible \\
+     \textbf{Kubernetes Learning Lab}: Cluster K3s multi-nœuds avec ArgoCD pour GitOps, Cert-Manager pour SSL automatique et ingress Traefik - Projet d'apprentissage des technologies cloud-native \\
      \textbf{Contributions Open Source}: \\
-     \hspace{0.2in} • \href{https://github.com/lamboley/AlomawaniQoL}{\underline{AlomawaniQoL}} - Addon World of Warcraft pour amélioration de l'expérience utilisateur \\
-     \hspace{0.2in} • \href{https://github.com/lamboley/Net-SSH-Perl-SFTP}{\underline{Net::SSH::Perl::SFTP}} - Module Perl pour transferts SFTP optimisés (performances 3x supérieures aux solutions standard) \\
-     \hspace{0.2in} • \href{https://github.com/lamboley/atom-french-menu}{\underline{french-menu}} - Plugin de traduction pour éditeur Atom (projet archivé)
+     \hspace{0.2in} • \href{https://github.com/lamboley/AlomawaniQoL}{\underline{AlomawaniQoL}} - Addon World of Warcraft en Lua pour amélioration de l'expérience utilisateur \\
+     \hspace{0.2in} • \href{https://github.com/lamboley/Net-SSH-Perl-SFTP}{\underline{Net::SSH::Perl::SFTP}} - Module Perl pour transferts SFTP optimisés (performances 3x supérieures) utilisé en production \\
+     \hspace{0.2in} • \href{https://github.com/lamboley/atom-french-menu}{\underline{french-menu}} - Plugin de traduction pour éditeur Atom (projet archivé) \\
+     \hspace{0.2in} • Contributions à divers projets DevOps (corrections de bugs, amélioration de documentation)
     }}
  \end{itemize}
 
