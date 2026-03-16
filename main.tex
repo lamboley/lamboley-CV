@@ -25,6 +25,7 @@
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
+\setlength{\footskip}{4.08003pt}
 
 \urlstyle{same}
 
@@ -56,14 +57,14 @@
 }
 
 \newcommand{\resumeSubSubheading}[2]{
-    \item
+  \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
+  \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
@@ -83,106 +84,154 @@
 
 \begin{document}
 
-\begin{center}
-    \textbf{\Huge \scshape Lucas Lamboley} \\ \vspace{1pt}
-    \small +33 6 00 00 00 00 $|$ \href{mailto:lucas.lamboley@outlook.com}{\underline{lucas.lamboley@outlook.com}} $|$
-    \href{https://github.com/lamboley}{\underline{github.com/lamboley}} $|$
-\end{center}
+  \begin{center}
+    \textbf{\Huge \scshape lucas lamboley} \\ \vspace{1pt}
+    \small +33 6 00 00 00 00 $|$
+    \href{mailto:lucas.lamboley@outlook.com}{\underline{lucas.lamboley@outlook.com}} $|$
+    \href{https://github.com/lamboley}{\underline{github.com/lamboley}}
+  \end{center}
 
-\section{Profil}
-\begin{itemize}[leftmargin=0.15in, label={}]
+  % ---- PROFIL ----
+  \section{Profil}
+  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-    Ingénieur Plateforme avec 10 ans d'expérience en infrastructure cloud et systèmes distribués. Spécialisé dans l'automatisation, l'architecture réseau et la transformation DevOps des organisations.
+      Parti de l'intégration et de l'administration système, j'ai progressivement glissé vers le DevOps
+      puis l'ingénierie plateforme --- 10 ans à construire et opérer des infrastructures qui permettent
+      aux équipes de développement de travailler sereinement. J'ai autant conçu des systèmes de zéro
+      que repris et fiabilisé des environnements existants. J'apprécie autant les sujets techniques de
+      fond que les échanges directs avec les développeurs pour comprendre leurs contraintes.
     }}
-\end{itemize}
+  \end{itemize}
 
-\section{Compétences Informatiques}
- \begin{itemize}[leftmargin=0.15in, label={}]
+  % ---- COMPÉTENCES ----
+  \section{Compétences Informatiques}
+  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Cloud \& Infrastructure}: AWS, Scaleway, OVH Cloud, Terraform, Ansible \\
-     \textbf{Virtualisation}: Proxmox \\
-     \textbf{Conteneurisation}: Docker, Docker Swarm \\
-     \textbf{CI/CD}: GitLab CI, Jenkins \\
-     \textbf{Observabilité}: Grafana, Prometheus, Loki, Alert Manager, Alloy, Netdata, Zabbix \\
-     \textbf{Systèmes \& Réseau}: RedHat, Debian, Ubuntu, pfSense, TCP/IP, VLAN, VPN \\
-    \textbf{Développement}: Go, TypeScript, Vue.js, Python, Perl, Bash/sh \\
-     \textbf{Middleware}: Apache, Nginx, Tomcat, HAProxy \\
-     \textbf{Bases de données}: PostgreSQL \\
-     \textbf{Outils}: Git, GitLab, GitHub \\
-     \textbf{Méthodologies}: Agile, ITIL \\
-     \textbf{Langues}: Français (natif), Anglais (courant)
+      \textbf{Cloud \& Infrastructure}: AWS, Scaleway, OVH Cloud, Terraform, Ansible \\
+      \textbf{Virtualisation}: Proxmox \\
+      \textbf{Conteneurisation}: Docker, Docker Swarm \\
+      \textbf{CI/CD}: GitLab CI, Jenkins \\
+      \textbf{Observabilité}: Grafana, Prometheus, Loki, Alert Manager, Alloy, Netdata, Zabbix \\
+      \textbf{Systèmes \& Réseau}: RedHat, Debian, Ubuntu, pfSense, TCP/IP, VLAN, VPN \\
+      \textbf{Développement}: Go, TypeScript, Vue.js, Python, Perl, Bash/sh \\
+      \textbf{Middleware}: Apache, Nginx, Tomcat, HAProxy \\
+      \textbf{Bases de données}: PostgreSQL \\
+      \textbf{Outils}: Git, GitLab, GitHub \\
+      \textbf{Méthodologies}: Agile, ITIL \\
+      \textbf{Langues}: Français (natif), Anglais (courant)
     }}
- \end{itemize}
+  \end{itemize}
 
-\section{Expériences}
+  % ---- EXPÉRIENCES ----
+  \section{Expériences}
   \resumeSubHeadingListStart
 
+    % -- ViaEvista --
     \resumeSubheading
       {Ingénieur Plateforme}{Octobre 2025 -- Présent}
       {ViaEvista}{Nancy, France}
+      \begin{itemize}[leftmargin=0.15in, label={}]
+        \small{\item{
+          Arrivé dans un contexte à deux vitesses : une infrastructure cloud déjà bien rodée d'un côté,
+          un environnement on-prem OVH sans automatisation de l'autre. Mon rôle : faire monter le second
+          au niveau du premier, sans casser le premier.
+        }}
+        \small{\item{
+          Le projet dont je suis le plus fier : la conception d'un \textit{Internal Developer Platform}
+          en Go, qui donne aux équipes dev une vision claire de leur infrastructure et réduit leur
+          dépendance aux allers-retours avec l'ops.
+        }}
+      \end{itemize}
       \resumeItemListStart
-        \resumeItem{Gestion d'une infrastructure multi-provider (AWS, Scaleway, OVH) hébergeant 22 applications métier avec un parc de 100 serveurs Debian}
-        \resumeItem{Déploiement et administration de serveurs bare metal OVH pour les applications nécessitant de fortes performances}
-        \resumeItem{Mise en place d'un cluster Proxmox avec stockage distribué et migration live des VMs entre hôtes, améliorant la disponibilité des services}
-        \resumeItem{Configuration complète du réseau : pfSense, segmentation VLAN, assurant l'isolation et la sécurité des environnements}
-        \resumeItem{Migration de l'infrastructure vers Terraform, permettant la reproductibilité complète des environnements et réduisant le temps de provisionnement}
-        \resumeItem{Automatisation des déploiements via pipelines GitLab CI/Ansible, réduisant les interventions manuelles et les erreurs de déploiement}
-        \resumeItem{Développement d'outils d'exploitation en Go pour l'administration quotidienne et l'intégration avec les APIs cloud}
-        \resumeItem{Déploiement d'une stack Grafana/Prometheus/Loki couvrant 100\% du parc, centralisant les métriques et les logs}
-        \resumeItem{Développement d'un référentiel d'infrastructure en Go (architecture hexagonale, deux microservices API REST + collecteur Proxmox) déployé sur Docker Swarm avec PostgreSQL et Redis}
-        \resumeItem{Développement de deux frontends Vue 3 + TypeScript + Vuetify avec authentification SSO GitLab OIDC}
+        \resumeItem{Migration de l'infrastructure vers Terraform, pipelines GitLab CI/Ansible}
+        \resumeItem{Mise en place d'un cluster Proxmox avec stockage distribué et migration live des VMs}
+        \resumeItem{Configuration réseau : pfSense, segmentation VLAN, isolation des environnements}
+        \resumeItem{Stack Grafana/Prometheus/Loki couvrant l'ensemble du parc}
+        \resumeItem{Déploiement et administration de serveurs bare metal OVH pour les applications critiques}
       \resumeItemListEnd
 
+    % -- Crédit Agricole DevOps --
     \resumeSubheading
       {DevOps/SRE}{Août 2021 -- Octobre 2025}
       {Crédit Agricole}{Nancy, France}
-      \resumeItemListStart
-        \resumeItem{Développement d'une collection de 50+ rôles Ansible utilisés par 8 équipes, standardisant les déploiements à l'échelle de la direction}
-        \resumeItem{Formation de plus de 100 développeurs aux pratiques CI/CD et à l'utilisation de la plateforme, accélérant l'adoption DevOps}
-        \resumeItem{Mise en place de pipelines GitLab CI pour l'exécution des playbooks Ansible avec tests et validation automatisés}
-        \resumeItem{Réduction des incidents récurrents grâce à l'amélioration continue des runbooks et la documentation systématique (180+ incidents/an traités)}
-        \resumeItem{Refonte de la documentation technique, réduction du temps d'onboarding de 3 semaines à 1 semaine}
-    \resumeItemListEnd
+      \begin{itemize}[leftmargin=0.15in, label={}]
+        \small{\item{
+          Arrivé dans une organisation où chaque équipe déployait à sa façon. J'ai construit from scratch
+          une collection de rôles Ansible --- avec au c{\oe}ur un rôle socle qui factorise les tâches
+          communes (téléchargement, extraction, templating) et que les autres rôles importent. Résultat :
+          écrire un nouveau rôle devient une affaire de configuration, pas de réécriture.
 
+          J'ai aussi formé les équipes dev à utiliser ces outils, via des réunions régulières ---
+          plus de 100 personnes au total sur plusieurs équipes.
+        }}
+      \end{itemize}
+      \resumeItemListStart
+        \resumeItem{Mise en place de pipelines GitLab CI pour l'exécution des playbooks avec validation automatisée}
+        \resumeItem{Réduction des incidents récurrents via amélioration continue des runbooks (180+ incidents/an traités)}
+        \resumeItem{Refonte de la documentation, onboarding ramené de 3 semaines à 1 semaine}
+      \resumeItemListEnd
+
+    % -- Crédit Agricole Ingénieur de Production --
     \resumeSubheading
       {Ingénieur de Production}{Février 2017 -- Juillet 2021}
       {Crédit Agricole}{Lille, France}
+      \begin{itemize}[leftmargin=0.15in, label={}]
+        \small{\item{
+          Monté et administré un cluster Docker Swarm de 2500+ conteneurs hébergeant plus de 100 API
+          en production. Le quotidien : garder ça stable, déployer sans interruption, et piloter les
+          cellules de crise quand un incident impactait la production.
+        }}
+      \end{itemize}
       \resumeItemListStart
-        \resumeItem{Administration d'un cluster Docker Swarm de 2500+ conteneurs hébergeant plus de 100 API REST/SOAP en production}
-        \resumeItem{Automatisation des déploiements avec Ansible : création de 100+ playbooks, déploiements sans interruption de service}
-        \resumeItem{Gestion de crises en production : coordination des équipes, rédaction de post-mortems et mise en place d'actions correctives}
-        \resumeItem{Développement d'outils spécifiques : client SFTP optimisé (2x plus rapide), scripts de purge, collecteur de métriques HAProxy}
-        \resumeItem{Mise en place du monitoring centralisé avec Grafana/Prometheus, améliorant la détection proactive des anomalies}
-        \resumeItem{Participation active à l'adoption des pratiques DevOps au sein de l'organisation, contribuant à la transformation culturelle}
-    \resumeItemListEnd
+        \resumeItem{Automatisation des déploiements Ansible : 100+ playbooks, zéro interruption de service}
+        \resumeItem{Développement d'un client SFTP optimisé en Perl pour contourner les limites de
+          connexions SSH sur le parc --- gain de vitesse x2}
+        \resumeItem{Collecteur de métriques HAProxy, scripts de purge}
+        \resumeItem{Mise en place du monitoring Grafana/Prometheus, détection proactive des anomalies}
+        \resumeItem{Coordination des équipes en cellule de crise, rédaction de post-mortems et mise en
+          place des actions correctives}
+      \resumeItemListEnd
 
+    % -- Vétoquinol --
     \resumeSubheading
       {Apprenti Administrateur Systèmes Réseaux}{Octobre 2015 -- Octobre 2016}
       {Vétoquinol}{Lure, France}
-      \resumeItemListStart
-        \resumeItem{Conception et déploiement d'une plateforme de virtualisation OpenStack avec Ceph pour le stockage distribué}
-        \resumeItem{Automatisation complète du déploiement via Ansible, réduisant le temps de provisionnement à moins de 30 minutes}
-        \resumeItem{Formation des équipes à l'utilisation de la plateforme}
-    \resumeItemListEnd
+      \begin{itemize}[leftmargin=0.15in, label={}]
+        \small{\item{
+          En apprentissage, missionné pour concevoir et déployer une plateforme OpenStack + Ceph en
+          remplacement de vSphere --- en autonomie complète, du choix d'architecture au déploiement
+          final. Automatisation intégrale via Ansible, provisionnement en moins de 30 minutes.
+        }}
+      \end{itemize}
+
   \resumeSubHeadingListEnd
 
-\section{Projets Personnels \& Open Source}
+  % ---- PROJETS ----
+  \section{Projets Personnels \& Open Source}
   \resumeSubHeadingListStart
+
     \resumeProjectHeading
       {\textbf{Home Lab}}{En cours}
       \resumeItemListStart
-        \resumeItem{Infrastructure personnelle automatisée : Home Assistant sur Raspberry Pi 5, Pi-hole pour filtrage DNS, monitoring Grafana/Prometheus, entièrement déployée via Ansible}
+        \resumeItem{Infrastructure personnelle automatisée : Home Assistant sur Raspberry Pi 5, Pi-hole
+          pour filtrage DNS, monitoring Grafana/Prometheus, entièrement déployée via Ansible}
       \resumeItemListEnd
+
     \resumeProjectHeading
       {\textbf{Contributions Open Source}}{}
       \resumeItemListStart
-        \resumeItem{\href{https://github.com/lamboley/AlomawaniQoL}{\underline{AlomawaniQoL}} -- Addon World of Warcraft en Lua}
-        \resumeItem{\href{https://github.com/lamboley/Net-SSH-Perl-SFTP}{\underline{Net::SSH::Perl::SFTP}} -- Module Perl pour transferts SFTP optimisés}
-        \resumeItem{\href{https://github.com/lamboley/atom-french-menu}{\underline{french-menu}} -- Plugin de traduction pour Atom (archivé)}
+        \resumeItem{\href{https://github.com/lamboley/AlomawaniQoL}{\underline{AlomawaniQoL}}
+          -- Addon World of Warcraft en Lua}
+        \resumeItem{\href{https://github.com/lamboley/Net-SSH-Perl-SFTP}{\underline{Net::SSH::Perl::SFTP}}
+          -- Module Perl pour transferts SFTP optimisés}
+        \resumeItem{\href{https://github.com/lamboley/atom-french-menu}{\underline{french-menu}}
+          -- Plugin de traduction pour Atom (archivé)}
       \resumeItemListEnd
+
   \resumeSubHeadingListEnd
 
- \section{Éducation}
+  % ---- ÉDUCATION ----
+  \section{Éducation}
   \resumeSubHeadingListStart
     \resumeSubheading
       {IUT Béziers}{Béziers, France}
