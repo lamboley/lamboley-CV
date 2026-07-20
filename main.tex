@@ -106,18 +106,18 @@
   \section{Compétences Informatiques}
   \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-      \textbf{Cloud \& Infrastructure}: AWS, Scaleway, OVH, Terraform, Ansible \\
+      \textbf{Cloud \& Infrastructure}: AWS, OVH, Terraform, Ansible \\
       \textbf{Virtualisation}: Proxmox \\
-      \textbf{Conteneurisation}: Docker, Docker Swarm, Kubernetes \\
-      \textbf{CI/CD}: GitLab CI \\
-      \textbf{Observabilité}: Grafana, Prometheus, Loki, Alert Manager, Alloy, Netdata \\
-      \textbf{Systèmes \& Réseau}: RedHat, Debian, Ubuntu, pfSense, TCP/IP, VLAN, VPN \\
-      \textbf{Développement}: Go, Dart/Flutter, TypeScript, Vue.js, Python, Perl, Bash/Sh \\
-      \textbf{Middleware}: Apache, Nginx, HAProxy \\
+      \textbf{Conteneurisation}: Docker, Docker Swarm, Buildah \\
+      \textbf{CI/CD}: GitLab CI, Github Actions \\
+      \textbf{Observabilité}: Grafana, Grafana Alerting, Prometheus, VictoriaMetrics, Loki, Alloy \\
+      \textbf{Systèmes \& Réseau}: RedHat, Debian, TCP/IP, DNS, Firewall (pfSense, firewalld), VLAN \\
+      \textbf{Développement}: Golang, Javascript, Vue.js 3, Python, Bash/Posix \\
+      \textbf{Middleware}: Nginx, Caddy, HAProxy \\
       \textbf{Bases de données}: PostgreSQL \\
       \textbf{Outils}: Git, GitLab \\
-      \textbf{Méthodologies}: Agile, ITIL, SRE \\
-      \textbf{Langues}: Français (natif), Anglais (courant)
+      \textbf{Méthodologies}: Agile, SRE, DevOps, CIS Benchmark, ANSSI, OWASP Top 10 \\
+      \textbf{Langues}: Français, Anglais
     }}
   \end{itemize}
 
@@ -127,24 +127,29 @@
 
     % -- ViaEvista --
     \resumeSubheading
-      {DevSecOps/Ingénieur Plateforme}{Octobre 2025 -- Présent}
+      {Ingénieur Cloud DevOps}{Octobre 2024 -- Présent}
       {ViaEvista}{Nancy, France}
       \resumeItemListStart
-        \resumeItem{Reprise d'un environnement on-prem sans automatisation pour le hisser au niveau du cloud existant}
-        \resumeItem{Conception d'une \textit{Internal Developer Platform} en Go offrant aux devs une vision directe de leur infrastructure}
-        \resumeItem{Migration de l'infrastructure vers Terraform, pipelines GitLab CI/Ansible}
-        \resumeItem{Migration des workloads Docker Swarm vers Kubernetes}
-        \resumeItem{Mise en place d'un cluster Proxmox avec stockage distribué et migration live des VMs}
-        \resumeItem{Configuration réseau : pfSense, segmentation VLAN, isolation des environnements}
-        \resumeItem{Stack Grafana/Prometheus/Loki couvrant l'ensemble du parc}
-        \resumeItem{Déploiement et administration de serveurs bare metal OVH pour les applications critiques}
-        \resumeItem{Veille technologique sur les outils, les méthodes et les bonnes pratiques DevSecOps}
-        \resumeItem{OWASP top 10}
+        \resumeItem{Conception d'architectures cloud AWS, from scratch comme en refonte d'environnements existants}
+        \resumeItem{Réduction de 30\% des coûts cloud : rightsizing, arrêt planifié des environnements non-prod, instances Spot et réservées, suppression des ressources orphelines}
+        \resumeItem{Migration de l'infrastructure vers l'IaC : Terraform et Ansible, exécutés via pipelines GitLab CI}
+        \resumeItem{Mise en place de la CI/CD : composants GitLab CI réutilisables (fin de la duplication, autonomie des devs sur leurs déploiements) et registre d'images custom}
+        \resumeItem{\textbf{RIH} --- conception et développement d'un portail interne self-service (Go, Vue~3, PostgreSQL, Redis) :
+          \begin{itemize}
+            \resumeItem{Référentiel unifié de l'infrastructure (providers cloud, hyperviseurs, clusters, VMs), synchronisé automatiquement}
+            \resumeItem{Catalogue self-service : les devs soumettent une demande, l'infra l'exécute via des pipelines GitLab CI standardisées}
+            \resumeItem{Sécurité côté serveur : allowlist de pipelines et validation des variables en fail-closed, RBAC adossé aux groupes Azure AD}
+            \resumeItem{Temps réel par SSE et Redis pub/sub, boucle de réconciliation des statuts depuis GitLab}
+          \end{itemize}
+        }
+        \resumeItem{Cluster Proxmox (stockage distribué, migration live des VMs) et serveurs bare metal OVH pour les applications critiques}
+        \resumeItem{Segmentation réseau : pfSense, VLAN, isolation des environnements}
+        \resumeItem{Observabilité de l'ensemble du parc : Grafana et Grafana Alerting sur VictoriaMetrics et Loki}
       \resumeItemListEnd
 
     % -- Crédit Agricole DevOps --
     \resumeSubheading
-      {DevOps/SRE}{Août 2021 -- Octobre 2025}
+      {Ingénieur DevOps/SRE (Site Reliability Engineer)}{Août 2021 -- Octobre 2024}
       {Crédit Agricole}{Nancy, France}
       \resumeItemListStart
         \resumeItem{Standardisé les déploiements d'une organisation de 100+ personnes via une collection de rôles Ansible construite from scratch --- architecture à rôle socle, extensible par configuration}
@@ -156,17 +161,15 @@
 
     % -- Crédit Agricole Ingénieur de Production --
     \resumeSubheading
-      {Ingénieur de Production, SRE}{Février 2017 -- Juillet 2021}
+      {Ingénieur de Production}{Février 2017 -- Juillet 2021}
       {Crédit Agricole}{Lille, France}
       \resumeItemListStart
         \resumeItem{Administration d'un cluster Docker Swarm de 2500+ conteneurs hébergeant plus de 100 API en production}
-        \resumeItem{Automatisation des déploiements Ansible : 100+ playbooks, zéro interruption de service}
-        \resumeItem{Développement d'un client SFTP optimisé en Perl pour contourner les limites de
-          connexions SSH sur le parc --- gain de vitesse x2}
-        \resumeItem{Collecteur de métriques HAProxy, scripts de purge}
-        \resumeItem{Mise en place du monitoring Grafana/Prometheus, détection proactive des anomalies}
-        \resumeItem{Coordination des équipes en cellule de crise, rédaction de post-mortems et mise en
-          place des actions correctives}
+        \resumeItem{Automatisation des déploiements via Ansible, gestion des secrets avec Ansible Vault et Docker Secrets}
+        \resumeItem{Développement d'un client SFTP Perl pour le téléchargement des logs}
+        \resumeItem{Développement Python pour récupérer les statistiques HAProxy et les envoyer vers Grafana}
+        \resumeItem{Mise en place de l'observabilité avec Grafana et Prometheus}
+        \resumeItem{Coordination des équipes en cellule de crise, rédaction de post-mortems et mise en place des actions correctives}
       \resumeItemListEnd
 
     % -- Vétoquinol --
@@ -174,8 +177,8 @@
       {Apprenti Administrateur Systèmes Réseaux}{Octobre 2015 -- Octobre 2016}
       {Vétoquinol}{Lure, France}
       \resumeItemListStart
-        \resumeItem{Conception et déploiement d'une plateforme OpenStack + Ceph en remplacement de vSphere, en autonomie complète du choix d'architecture au déploiement final}
-        \resumeItem{Automatisation intégrale via Ansible, provisionnement en moins de 15 minutes}
+        \resumeItem{Design, conception et déploiement d'une plateforme OpenStack + Ceph en remplacement de vSphere}
+        \resumeItem{Automatisation du déploiement via Ansible}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -183,21 +186,6 @@
   % ---- PROJETS ----
   \section{Projets Personnels \& Open Source}
   \resumeSubHeadingListStart
-
-    \resumeProjectHeading
-      {\textbf{Application mobile Flutter}}{En cours}
-      \resumeItemListStart
-        \resumeItem{Application mobile cross-platform en Dart/Flutter à destination des utilisateurs
-          neuroatypiques --- aide à l'initiation des tâches via un système d'alarmes persistantes
-          et de rappels structurés}
-      \resumeItemListEnd
-
-    \resumeProjectHeading
-      {\textbf{Home Lab}}{En cours}
-      \resumeItemListStart
-        \resumeItem{Infrastructure personnelle automatisée : Home Assistant sur Raspberry Pi 5, Pi-hole
-          pour filtrage DNS, monitoring Grafana/Prometheus, entièrement déployée via Ansible}
-      \resumeItemListEnd
 
     \resumeProjectHeading
       {\textbf{Contributions Open Source}}{}
